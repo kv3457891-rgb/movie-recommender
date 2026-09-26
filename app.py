@@ -1,3 +1,5 @@
+import os
+import gdown
 import pandas as pd
 import streamlit as st
 import pickle as pkl
@@ -49,6 +51,13 @@ def recommend(movie):
 
 movies_dict = pkl.load(open('movie_dict.pkl', 'rb'))
 movies = pd.DataFrame(movies_dict)
+
+# Download similarity.pkl from Google Drive if it doesn't exist
+if not os.path.exists("similarity.pkl"):
+    file_id = "1K3kOKtce51sa5zFIXagJqiqb9Gul-zU9"
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, "similarity.pkl", quiet=False)
+
 similarity = pkl.load(open('similarity.pkl', 'rb'))
 
 st.title('Movie Recommender System')
