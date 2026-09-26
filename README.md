@@ -6,6 +6,10 @@ A content-based movie recommendation system built using Python and Streamlit.
 
 [Click here to use the Movie Recommendation System](https://movie-recommender-rpahbay2yn6m8r7auggl78.streamlit.app/)
 
+## 📓 Jupyter Notebook
+
+[View the complete ML development notebook](movie-recommder-system.ipynb)
+
 ## 🛠️ Technologies Used
 
 - Python
